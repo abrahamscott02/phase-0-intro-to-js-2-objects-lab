@@ -1,59 +1,31 @@
-// Write your solution in this file!
-// const updateEmployeeWithKeyAndValue(employee, key, value)  = {
-//     employees: {
-//         name: "Tony",
-//         address: "3899 Primrose Ct"
-//     }
-// }
-
 const employee = {
-    name: "Bob",
-    streetAddress: "100 county rd"
+    name: "Ellis",
+    streetAddress: "404 Rocky Road"
 }
 
-function updateEmployeeWithKeyAndValue(employee, key, value) {
-    
+function updateEmployeeWithKeyAndValue(employee, key, value){
     const newEmployee = {...employee};
-    console.log("This is the value of the second perameter key: ", key)
-    console.log("This is the value of the third perameter value: ", value)
     newEmployee[key] = value;
 
-    return newEmployee;
+    return newEmployee
 }
 
+// updateEmployeeWithKeyAndValue(employee, "age", "20")
 
-const luisObject = {
-    name: "Luis",
-    favoriteMovie: "Star Wars"
-}
-
-function destructivelyUpdateEmployeeWithKeyAndValue (employee, key, value) {
-    console.log("employee: ", employee);
-    console.log("key: ", key);
-    console.log("value: ", value);
-
-
-
+function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
     employee[key] = value;
 
-    return employee;
+    return employee
 }
 
+function deleteFromEmployeeByKey(employee, key){
+    const deleteEmployee = {...employee};
 
-
-
-function deleteFromEmployeeByKey(employee, key) {
-    const veryNewEmployee = {...employee}
-    
-
-    delete veryNewEmployee[key];
-    return veryNewEmployee;
+    delete deleteEmployee[key];
+    return deleteEmployee;
 }
 
-function destructivelyDeleteFromEmployeeByKey(employee, key) {
+function destructivelyDeleteFromEmployeeByKey(employee, key){
     delete employee[key];
     return employee;
 }
-
-console.log(updateEmployeeWithKeyAndValue())
-
